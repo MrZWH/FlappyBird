@@ -1,6 +1,7 @@
 // 初始化整个游戏的精灵，作为游戏开始的入口
 import {ResourceLoader} from './js/base/ResourceLoader.js';
 import {BackGround} from './js/runtime/BackGround.js';
+import {Land} from './js/runtime/Land.js';
 import {DataStore} from './js/base/DataStore.js';
 import {Director} from './js/Director.js';
 
@@ -22,7 +23,8 @@ export class Main {
 
 	init() {
 		this.dataStore
-			.put('background', BackGround);
+			.put('background', BackGround)
+			.put('land', Land);
 		Director.getInstance().run();
 	}
 }
