@@ -22,13 +22,7 @@ export class Main {
 
 	init() {
 		this.dataStore
-			.put(
-				'background',
-				new BackGround(
-					this.ctx,
-					this.dataStore.res.get('background')
-				)
-			);
+			.put('background', BackGround);
 		Director.getInstance().run();
 	}
 }
