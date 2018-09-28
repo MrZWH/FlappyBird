@@ -1,4 +1,5 @@
 import {Pencil} from './Pencil.js';
+import {Sprite} from '../base/Sprite.js';
 
 // 上半部分铅笔
 export class UpPencil extends Pencil {
