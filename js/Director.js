@@ -81,6 +81,14 @@ export class Director {
 				return;
 			}
 		}
+
+		// 加分逻辑
+		if (birds.birdsX[0] > pencils[0].x + pencils[0].width &&
+			score.isScore
+		) {
+			score.isScore = false;
+			score.scoreNumber++;
+		}
 	}
 
 	run() {
@@ -105,7 +113,7 @@ export class Director {
 			})
 
 			this.dataStore.get('land').draw();
-
+			this.dataStore.get('score').draw();
 			this.dataStore.get('birds').draw();
 
 			let timer = requestAnimationFrame(() => this.run());
