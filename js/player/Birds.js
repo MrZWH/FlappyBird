@@ -48,6 +48,19 @@ export class Birds extends Sprite {
 		// 减速器的作用
 		this.index = Math.floor(this.count);
 
+		// 设定重力加速度
+		const g = 0.98 / 2.4;
+		// 向上移动一丢丢的偏移量
+		const offsetUp = 30;
+		// 小鸟的位移
+		const offsetY = (g * this.time * (this.time - offsetUp)) / 2;
+
+		for(let i = 0; i<=2; i++) {
+			this.birdsY[i] = this.y[i] + offsetY;
+		}
+
+		this.time++;
+
 		super.draw(this.img,
 			this.clippingX[this.index], this.clippingY[this.index],
 			this.clippWidth[this.index], this.clippHeight[this.index],
