@@ -37,18 +37,23 @@ export class Birds extends Sprite {
 	}
 
 	draw() {
-		this.srcX = this.srcX + this.srcW / 3;
+		// 切换三只小鸟的速度
+		const speed = 0.2;
+		this.count = this.count + speed;
 
-		if (this.srcX >= this.srcW) {
-			this.srcX = 0;
+		if (this.index >= 2) {
+			this.count = 0;
 		}
 
+		// 减速器的作用
+		this.index = Math.floor(this.count);
+
 		super.draw(this.img,
-			this.srcX, this.srcY,
-			this.srcW / 3, this.srcH,
-			this.x, this.y,
-			this.width / 3,
-			this.height
+			this.clippingX[this.index], this.clippingY[this.index],
+			this.clippWidth[this.index], this.clippHeight[this.index],
+			this.birdsX[this.index], this.birdsY[this.index],
+			this.birdsWidth[this.index],
+			this.birdsHeight[this.index]
 		);
 	}
 }
