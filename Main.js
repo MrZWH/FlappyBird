@@ -23,6 +23,8 @@ export class Main {
 	}
 
 	init() {
+		this.director.isGameOver = false;
+
 		this.dataStore
 			.put('pencils', [])
 			.put('background', BackGround)
