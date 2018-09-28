@@ -28,6 +28,7 @@ export class Land extends Sprite {
 			-this.landX,
 			this.y,
 			this.width,
-			this.height)
+			this.height
+		);
 	}
 }
