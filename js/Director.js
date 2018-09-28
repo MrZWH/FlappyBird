@@ -101,6 +101,7 @@ export class Director {
 				pencils.length===4) {
 				pencils.shift();
 				pencils.shift();
+				this.dataStore.get('score').isScore = true;
 			}
 
 			if (pencils[0].x <= (window.innerWidth - pencils[0].width) / 2 &&
