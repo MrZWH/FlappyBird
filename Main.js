@@ -31,8 +31,20 @@ export class Main {
 			.put('background', BackGround)
 			.put('land', Land)
 			.put('birds', Birds);
+		this.registerEvent();
 		// 创建铅笔要在游戏逻辑运行之前
 		this.director.createPencil();
 		this.director.run();
+	}
+
+	registerEvent() {
+		this.canvas.addEventListener('touchstart', e => {
+			e.preventDefault();
+			if (this.director.isGameOver) {
+				this.init();
+			} else {
+				this.director.birdsEvent();
+			}
+		})
 	}
 }
