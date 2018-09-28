@@ -1,4 +1,5 @@
 import {Sprite} from '../base/Sprite.js';
+import {Director} from '../Director.js';
 
 // 不断移动的陆地
 export class Land extends Sprite {
@@ -8,9 +9,10 @@ export class Land extends Sprite {
 			image.width, image.height,
 			0, window.innerHeight - image.height,
 			image.width, image.height);
-
+		// 地板的水平变化坐标
 		this.landX = 0;
-		this.landSpeed = 2;
+		// 地板的移动速度
+		this.landSpeed = Director.getInstance().moveSpeed;
 	}
 
 	draw() {
