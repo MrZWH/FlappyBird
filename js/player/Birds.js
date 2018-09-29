@@ -1,4 +1,5 @@
 import {Sprite} from '../base/Sprite.js';
+import { DataStore } from "../base/DataStore.js";
 
 // 小鸟类
 // 循环的渲染三只小鸟
@@ -22,9 +23,9 @@ export class Birds extends Sprite {
 		this.clippingY = [10, 10, 10];
 		this.clippWidth = [34, 34, 34];
 		this.clippHeight = [24, 24, 24];
-		const birdX = window.innerWidth / 4;
+		const birdX = DataStore.getInstance().canvas.width / 4;
 		this.birdsX = [birdX, birdX, birdX];
-		const birdY = window.innerHeight / 2;
+		const birdY = DataStore.getInstance().canvas.height / 2;
 		this.birdsY = [birdY, birdY, birdY];
 		const birdWidth = 34;
 		this.birdsWidth = [birdWidth, birdWidth, birdWidth];

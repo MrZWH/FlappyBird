@@ -21,3 +21,5 @@
 - StartButton.js 重新开始按钮类
 
 推荐live-server开启服务
+
+手机工具：AirDroid
