@@ -24,4 +24,15 @@ export class ApiExamples {
 			}
 		});
 	}
+
+	httpExample() {
+		wx.request({
+			url: 'http://127.0.0.1:8181/',
+			method: 'POST',
+			data: 'Mydata',
+			success: function (response) {
+				console.log(response)
+			}
+		})
+	}
 }

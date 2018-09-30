@@ -37,6 +37,7 @@ export class Main {
 		// examples.getUserInfo();
 		// examples.login();
 		// examples.getSettings();
+		// examples.httpExample();
 		this.init();
 	}
 
