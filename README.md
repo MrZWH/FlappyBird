@@ -1,3 +1,5 @@
+## FlappyBird
+![](./flappyBird.PNG)
 ## 小游戏开发
 - 小游戏逻辑梳理
 - 小游戏呈现的原理解读
