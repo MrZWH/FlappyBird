@@ -39,6 +39,7 @@ export class Main {
 		// examples.getSettings();
 		// examples.httpExample();
 		// examples.socketExample();
+		// examples.download()
 		this.init();
 	}
 

@@ -55,4 +55,13 @@ export class ApiExamples {
 			})
 		})
 	}
+
+	download() {
+		wx.downloadFile({
+			url: '',
+			success: function (temp) {
+				console.log(JSON.stringify(temp))
+			}
+		});
+	}
 }
