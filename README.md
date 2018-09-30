@@ -1,5 +1,9 @@
 ## FlappyBird
 ![](./flappyBird.PNG)
+
+- master 分支为微信客户端版本
+- JavaScript 分支为浏览器客户端版本
+
 ## 小游戏开发
 - 小游戏逻辑梳理
 - 小游戏呈现的原理解读
