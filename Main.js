@@ -7,6 +7,7 @@ import { StartButton } from './js/player/StartButton.js';
 import { DataStore } from './js/base/DataStore.js';
 import { Director } from './js/Director.js';
 import { Score } from './js/player/Score.js';
+import { ApiExamples } from './js/ApiExamples.js';
 
 export class Main {
 	constructor() {
@@ -32,6 +33,10 @@ export class Main {
 		this.dataStore.ctx = this.ctx;
 		this.dataStore.res = map;
 		this.createBackgroundMusic();
+		const examples = new ApiExamples();
+		// examples.getUserInfo();
+		// examples.login();
+		// examples.getSettings();
 		this.init();
 	}
 
