@@ -50,7 +50,7 @@ export class Director {
 	check() {
 		const birds = this.dataStore.get('birds');
 		const land = this.dataStore.get('land');
-    const pencils = this.dataStore.get('pencils');
+	    const pencils = this.dataStore.get('pencils');
 		const score = this.dataStore.get('score');
 
 		// 地板的撞击判断
@@ -87,6 +87,11 @@ export class Director {
 		if (birds.birdsX[0] > pencils[0].x + pencils[0].width &&
 			score.isScore
 		) {
+			wx.vibrateShort({
+				success: function () {
+					console.log('震动成功')
+				}
+			})
 			score.isScore = false;
 			score.scoreNumber++;
 		}
@@ -125,6 +130,8 @@ export class Director {
 			this.dataStore.get('startButton').draw();
 			cancelAnimationFrame(this.dataStore.get('timer'));
 			this.dataStore.destroy();
+			// 触发微信小游戏垃圾回收
+			wx.triggerGC();
 		}
 	}
 }

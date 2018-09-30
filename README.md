@@ -23,3 +23,7 @@
 推荐live-server开启服务
 
 手机工具：AirDroid
+
+## 需要关注的几个 API
+- wx.triggerGC() 垃圾回收
+- wx.createInnerAudioContext() 创建背景音乐
