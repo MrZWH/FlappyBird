@@ -38,6 +38,7 @@ export class Main {
 		// examples.login();
 		// examples.getSettings();
 		// examples.httpExample();
+		// examples.socketExample();
 		this.init();
 	}
 
